@@ -1,53 +1,44 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const badgesRow = document.getElementById('badges');
-    const certificatesRow = document.getElementById('certificates');
-    const achievementsRow = document.getElementById('achievements');
+    const sections = document.querySelectorAll('.section');
 
-    // Sample data for badges, certificates, and achievements
-    const badges = [
-        { image: 'badge1.jpg', name: 'Java Master', description: 'Earned for mastering Java programming language.' },
-        { image: 'badge2.jpg', name: 'HTML Ninja', description: 'Awarded for exceptional skills in HTML.' }
-    ];
+    sections.forEach(section => {
+        const carousel = section.querySelector('.carousel');
+        const items = section.querySelectorAll('.item');
+        let itemWidth = items[0].offsetWidth;
 
-    const certificates = [
-        { image: 'certificate1.jpg', name: 'Java Certification', description: 'Certified in Java programming language.' },
-        { image: 'certificate2.jpg', name: 'Web Development Certification', description: 'Certified in web development technologies.' }
-    ];
-
-    const achievements = [
-        { image: 'achievement1.jpg', name: 'Top Coder', description: 'Achieved the top rank in a coding competition.' },
-        { image: 'achievement2.jpg', name: 'Project Showcase Winner', description: 'Winner of the project showcase event.' }
-    ];
-
-    function createItem(item) {
-        const column = document.createElement('div');
-        column.classList.add('column');
-
-        const image = document.createElement('img');
-        image.src = item.image;
-        image.alt = item.name;
-
-        const name = document.createElement('h2');
-        name.textContent = item.name;
-
-        const description = document.createElement('p');
-        description.textContent = item.description;
-
-        column.appendChild(image);
-        column.appendChild(name);
-        column.appendChild(description);
-
-        return column;
-    }
-
-    function populateRow(row, items) {
-        items.forEach(item => {
-            const column = createItem(item);
-            row.appendChild(column);
+        // Update item width on window resize
+        window.addEventListener('resize', function () {
+            itemWidth = items[0].offsetWidth;
         });
-    }
 
-    populateRow(badgesRow, badges);
-    populateRow(certificatesRow, certificates);
-    populateRow(achievementsRow, achievements);
+        // Function to scroll to the selected index
+        function scrollToIndex(index) {
+            carousel.scrollTo({
+                left: index * itemWidth,
+                behavior: 'smooth'
+            });
+        }
+
+        // Optional: Add touch swipe functionality
+        let startX = 0;
+
+        carousel.addEventListener('touchstart', function (e) {
+            startX = e.touches[0].clientX;
+        });
+
+        carousel.addEventListener('touchmove', function (e) {
+            e.preventDefault();
+        });
+
+        carousel.addEventListener('touchend', function (e) {
+            const endX = e.changedTouches[0].clientX;
+            const deltaX = endX - startX;
+
+            if (deltaX > 50) {
+                scrollToIndex(Math.max(carousel.scrollLeft / itemWidth - 1, 0)); // Swipe right
+            } else if (deltaX < -50) {
+                scrollToIndex(Math.min(carousel.scrollLeft / itemWidth + 1, items.length - 1)); // Swipe left
+            }
+        });
+    });
 });
