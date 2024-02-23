@@ -2,71 +2,65 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f2f2f2;
-}
-
-header {
-    text-align: center;
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0;
-}
-
-h1 {
-    margin: 0;
-}
-
-.section {
-    padding: 20px;
-}
-
-h2 {
-    margin-top: 0;
-}
-
-.carousel {
-    display: flex;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+  }
+  
+  .row {
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .scrolling-wrapper {
     overflow-x: auto;
-    scroll-snap-type: x mandatory;
-}
-
-.carousel::-webkit-scrollbar {
-    display: none;
-}
-
-.item {
-    flex: 0 0 auto;
+    white-space: nowrap;
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none; /* For Internet Explorer and Edge */
+  }
+  
+  .scrolling-wrapper::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Opera */
+  }
+  
+  .card {
+    display: inline-block;
     width: 200px;
     margin-right: 10px;
-    scroll-snap-align: start;
-    border: 1px solid #ccc;
+    background-color: #f9f9f9;
     border-radius: 5px;
-    background-color: #fff;
     padding: 10px;
-}
-
-.item img {
-    max-width: 100%;
-    height: auto;
-    display: block;
+  }
+  
+  .card img {
+    width: 100%;
     border-radius: 5px;
     margin-bottom: 10px;
-}
-
-
-
-.social-links {
-    text-align: center;
+  }
+  
+  .social-media {
     margin-top: 20px;
-}
-
-.social-links a {
-    display: inline-block;
-    margin: 0 10px;
-    font-size: 24px;
-    color: #333;
-}
-
-.social-links a:hover {
-    color: #007bff;
-}
+    text-align: center;
+  }
+  
+  .social-media a {
+    margin-right: 10px;
+  }
+  
+  .social-media img {
+    width: 40px;
+  }
+  .portfolio-header {
+    text-align: center;
+    font-size: 3em;
+    color: white;
+    margin-top: 50px;
+    background-color: black;
+  }
