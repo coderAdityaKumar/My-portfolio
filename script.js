@@ -33,7 +33,7 @@ function addCard(rowId, imgUrl, name, description, link) {
   addCard('certifications', 'SoloLearn.png', 'SoloLearn', 'Introduction To Java', 'https://api2.sololearn.com/v2/certificates/CC-2PANKYHB/image/png');
   addCard('certifications', 'certification-img2.png', 'Certification Name 2', 'Description of Certification 2', '#');
   
-  addCard('badges', 'badge-img1.png', 'Badge Name 1', 'Description of Badge 1', '#');
+  addCard('badges', 'HackerRank Bronze badge.png', 'Java Bronze', 'Just earned the Bronze Badge for Java on HackerRank! ', 'https://www.hackerrank.com/profile/asr341025');
   addCard('badges', 'badge-img2.png', 'Badge Name 2', 'Description of Badge 2', '#');
   
   addCard('achievements', 'achievement-img1.png', 'Achievement Name 1', 'Description of Achievement 1', '#');
