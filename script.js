@@ -36,6 +36,6 @@ function addCard(rowId, imgUrl, name, description, link) {
   addCard('badges', 'HackerRank Bronze badge.png', 'Java Bronze', 'Just earned the Bronze Badge for Java on HackerRank! ', 'https://www.hackerrank.com/profile/asr341025');
   addCard('badges', 'HackerRank Silver Badge.png', 'Java Silver', 'Just earned the Silver Badge for Java on HackerRank!', '#');
   
-  addCard('achievements', 'achievement-img1.png', 'Achievement Name 1', 'Description of Achievement 1', '#');
-  addCard('achievements', 'achievement-img2.png', 'Achievement Name 2', 'Description of Achievement 2', '#');
+  addCard('projects', 'project-img1.png', 'project Name 1', 'Description of Project 1', '#');
+  addCard('projects', 'project-img2.png', 'Project Name 2', 'Description ofProject 2', '#');
   
