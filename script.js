@@ -37,5 +37,5 @@ function addCard(rowId, imgUrl, name, description, link) {
   addCard('badges', 'HackerRank Silver Badge.png', 'Java Silver', 'Just earned the Silver Badge for Java on HackerRank!', '#');
   
   addCard('projects', 'Amazon Clone.png', 'Amazon Clone', 'Amazon clone using HTML and CSS', 'https://coderadityakumar.github.io/Amazon-Clone/');
-  addCard('projects', 'project-img2.png', 'Project Name 2', 'Description ofProject 2', '#');
+  addCard('projects', 'Procuct Landing Page.png', 'Project Landing Page', 'Product Landing Page using html, css', '#');
   
