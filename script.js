@@ -38,4 +38,5 @@ function addCard(rowId, imgUrl, name, description, link) {
   
   addCard('projects', 'Amazon Clone.png', 'Amazon Clone', 'Amazon clone using HTML and CSS', 'https://coderadityakumar.github.io/Amazon-Clone/');
   addCard('projects', 'Procuct Landing Page.png', 'Project Landing Page', 'Product Landing Page using html, css', '#');
+  addCard('projects', 'Procuct Landing Page.png', 'Simple Calculator', 'Simple Calculator using html, css, js', 'https://coderadityakumar.github.io/Calculator/');
   
